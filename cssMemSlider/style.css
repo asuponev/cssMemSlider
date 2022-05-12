@@ -19,7 +19,7 @@ body {
 
 .container {
   width: 80%;
-  margin: 10vh auto;
+  margin: 1rem auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
