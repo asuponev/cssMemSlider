@@ -44,7 +44,6 @@ input[name="image"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5%;
   transition: all 0.6s ease;
 }
 
@@ -152,4 +151,37 @@ input[name="image"] {
 .container input:nth-of-type(4):checked ~ .inner .controls label:nth-of-type(4) {
   background: var(--color-gray);
   border: solid var(--color-black);
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 1em;
+  }
+
+  .images {
+    height: 80%;
+  }
+
+  .inner {
+    flex-direction: column;
+    height: 20%;
+    gap: 1em;
+  }
+
+  .wrapper-descriptions {
+    width: 100%;
+    height: 50%;
+    order: 2;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  .controls {
+    order: 1;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
 }
