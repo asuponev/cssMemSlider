@@ -67,13 +67,14 @@ input[name="image"] {
 
 .description-item {
   width: 25%;
+  height: 2.5rem;
   transition: all 0.6s ease;
+  display: flex;
+  align-items: center;
 }
 
 .description {
   width: 100%;
-  display: flex;
-  align-items: center;
 }
 
 #image-1:checked ~ .images .item,
