@@ -9,7 +9,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +32,6 @@ input[name="image"] {
 
 .images {
   width: 400%;
-  height: 90%;
   display: flex;
 }
 
@@ -54,7 +52,6 @@ input[name="image"] {
 .inner {
   display: flex;
   width: 100%;
-  height: 10%;
 }
 
 .wrapper-descriptions {
@@ -64,20 +61,17 @@ input[name="image"] {
 
 .descriptions {
   width: 400%;
-  height: 100%;
   display: flex;
   align-items: center;
 }
 
 .description-item {
   width: 25%;
-  height: 100%;
   transition: all 0.6s ease;
 }
 
 .description {
   width: 100%;
-  height: 100%;
   font-size: 2em;
   display: flex;
   align-items: center;
@@ -105,7 +99,6 @@ input[name="image"] {
 
 .controls {
   width: 50%;
-  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -134,19 +127,13 @@ input[name="image"] {
 }
 
 @media (max-width: 768px) {
-  .images {
-    height: 80%;
-  }
-
   .inner {
     flex-direction: column;
-    height: 20%;
     gap: 1rem;
   }
 
   .wrapper-descriptions {
     width: 100%;
-    height: 50%;
     order: 2;
   }
 
@@ -157,7 +144,6 @@ input[name="image"] {
   .controls {
     order: 1;
     width: 100%;
-    height: 50%;
     justify-content: center;
   }
 
