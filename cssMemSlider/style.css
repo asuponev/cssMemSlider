@@ -1,0 +1,159 @@
+:root {
+  --font-main: 400 1em/1 'Inter', sans-serif;
+  --color-main: #dfdfdf;
+  --color-black: #000000;
+  --color-gray: #9b9b9b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-main);
+  font: var(--font-main);
+  color: var(--color-black);
+}
+
+.container {
+  width: 80%;
+  margin: 1rem auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[name="image"] {
+  display: none;
+}
+
+.images {
+  width: 400%;
+  display: flex;
+}
+
+.image-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s ease;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+}
+
+.wrapper-descriptions {
+  width: 80%;
+  overflow: hidden;
+}
+
+.descriptions {
+  width: 400%;
+  display: flex;
+  align-items: center;
+}
+
+.description-item {
+  width: 25%;
+  height: 2.5rem;
+  transition: all 0.6s ease;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  width: 100%;
+}
+
+#image-1:checked ~ .images .item,
+#image-1:checked~.inner .descriptions .item {
+  margin-left: 0;
+}
+
+#image-2:checked ~ .images .item,
+#image-2:checked~.inner .descriptions .item {
+  margin-left: -25%;
+}
+
+#image-3:checked ~ .images .item,
+#image-3:checked~.inner .descriptions .item {
+  margin-left: -50%;
+}
+
+#image-4:checked ~ .images .item,
+#image-4:checked~.inner .descriptions .item {
+  margin-left: -75%;
+}
+
+.controls {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+.label span {
+  width: 1em;
+  height: 1em;
+  background-color: var(--color-black);
+  border-radius: 0.5em;
+}
+
+.label:hover span {
+  background-color: var(--color-gray);
+}
+
+.container input:nth-of-type(1):checked ~ .inner .controls label:nth-of-type(1) span,
+.container input:nth-of-type(2):checked ~ .inner .controls label:nth-of-type(2) span,
+.container input:nth-of-type(3):checked ~ .inner .controls label:nth-of-type(3) span,
+.container input:nth-of-type(4):checked ~ .inner .controls label:nth-of-type(4) span {
+  background: var(--color-main);
+  border: 0.125rem solid var(--color-black);
+}
+
+.container input:nth-of-type(1):checked~.inner .controls label:nth-of-type(1):hover span,
+.container input:nth-of-type(2):checked~.inner .controls label:nth-of-type(2):hover span,
+.container input:nth-of-type(3):checked~.inner .controls label:nth-of-type(3):hover span,
+.container input:nth-of-type(4):checked~.inner .controls label:nth-of-type(4):hover span {
+  border: 0.125rem solid var(--color-gray);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .wrapper-descriptions {
+    width: 100%;
+    order: 2;
+  }
+
+  .controls {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+}
